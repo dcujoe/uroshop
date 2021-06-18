@@ -1,6 +1,7 @@
 import path from 'path'
 import express from 'express'
 import dotenv from 'dotenv'
+import mongoose from 'mongoose'
 import cors from 'cors'
 import colors from 'colors'
 import morgan from 'morgan'
@@ -26,7 +27,18 @@ if(process.env.NODE_ENV === 'development') {
 //app.use(cors)
 app.use(express.json())
 
+// mongoose connection to mongoDB
+const uri = process.env.MONGO_URI;
 
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
+
+const connection = mongoose.connection;
+
+connection.once("open", () => {
+  console.log("MongoDB database connection established successfully");
+});
+
+// routes
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/orders', orderRoutes)
