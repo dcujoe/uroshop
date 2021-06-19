@@ -1,6 +1,8 @@
 main {
-  min-height: 200vh;
+  min-height: 150vh;
+  min-width: none;
 }
+
 
 h3 {
   padding: 1rem 0;
@@ -20,6 +22,10 @@ h2 {
   margin: 0.1rem;
 }
 
+.carousel {
+  height: 30rem;
+}
+
 /* Carousel */
 .carousel-item-next,
 .carousel-item-prev,
@@ -37,15 +43,25 @@ h2 {
 }
 
 .carousel img { 
-  height: 300px;
-  padding: 30px;
-  margin: 40px;
-  border-radius: 50%;
+  height: 25rem;
+  padding: 5px;
+  margin: 4px;
+  /*border-radius: 50%;*/
 }
 
 .carousel a {
   margin: 0 auto;
 }
+
+.top-marketing {
+  margin-bottom: 2rem;
+}
+
+.top-marketing_2 { 
+  margin-bottom: 2rem;
+  background: color red;
+}
+
 
 
 

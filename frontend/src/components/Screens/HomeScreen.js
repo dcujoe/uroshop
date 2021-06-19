@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import Product from "../Screens/Product";
 import Message from "../Message";
 import Loader from "../Loader";
@@ -10,6 +10,7 @@ import Paginate from "../Paginate";
 import { listProducts } from "./productActions";
 import ProductCarousel from "../ProductCarousel";
 import Meta from "../Meta";
+import logo from "./logo"
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
@@ -30,8 +31,9 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
+    <Container className="overall_main">
       <Helmet>
-        <title>Welcome To Uroshop</title>
+        <title>{`${logo.image}`}</title>
         <Meta />
         <meta
           name="description"
@@ -42,27 +44,41 @@ const HomeScreen = ({ match }) => {
           content="electronics, buy electronics, cheap electronics"
         />
       </Helmet>
+    
+      <Container variant="primary">
+  <Row className="top-marketing" variant="primary">
+    <Col>Best quality from Europe</Col>
+    <Col>Buy the Best of German </Col>
+  </Row>
+  
+</Container>
       {!keyword ? (
         <ProductCarousel />
+  
       ) : (
         <Link to="/" className="btn btn-light">
           Go Back
         </Link>
       )}
+      <Row>
+        <Col mr-sm-10>
       <h1>Newest Products</h1>
+      </Col>
+      </Row>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-          <Row>
+          <Row className="homepage_products">
             {products.map((product) => (
               <Col key={product._id} sm={12} md={9} lg={4} xl={3}>
                 <Product product={product} />
               </Col>
             ))}
           </Row>
+          
           <Paginate
             pages={pages}
             page={page}
@@ -70,6 +86,7 @@ const HomeScreen = ({ match }) => {
           />
         </>
       )}
+      </Container>
     </>
   );
 };
