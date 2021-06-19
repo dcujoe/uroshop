@@ -22,6 +22,10 @@ h2 {
  font-weight: 1rem;
 }
 
+.back-button {
+  margin-bottom: 2rem;
+}
+
 .rating span {
   margin: 0.1rem;
 }
