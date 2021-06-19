@@ -97,7 +97,7 @@ import { USER_UPDATE_RESET } from './constants/userConstants'
                         </Form.Check>
                     </Form.Group>
 
-                    <Button type='submit' variant='primary'>
+                    <Button type='submit' variant='outline-info'>
                                        Update
                     </Button>
                 </Form>

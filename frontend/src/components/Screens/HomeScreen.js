@@ -31,7 +31,8 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-    <Container className="overall_main">
+    <Container fluid="true">
+   
       <Helmet>
         <title>{`${logo.image}`}</title>
         <Meta />
@@ -45,10 +46,10 @@ const HomeScreen = ({ match }) => {
         />
       </Helmet>
     
-      <Container variant="primary">
+      <Container variant="primary" fluid>
   <Row className="top-marketing" variant="primary">
-    <Col>Best quality from Europe</Col>
-    <Col>Buy the Best of German </Col>
+    <Col className="home_font">Best quality from Europe</Col>
+    <Col className="home_font">Buy the Best of German</Col>
   </Row>
   
 </Container>

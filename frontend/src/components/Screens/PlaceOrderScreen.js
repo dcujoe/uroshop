@@ -102,7 +102,7 @@ const PlaceOrderScreen = ({ history }) => {
         </Col>
         <Col md={4}>
             <Card>
-                <ListGroup variant='flush'>
+                <ListGroup variant='outline-info'>
                     <ListGroup.Item>
                         <h2>Order Summary</h2>
                     </ListGroup.Item>
@@ -138,6 +138,7 @@ const PlaceOrderScreen = ({ history }) => {
                     </ListGroup.Item>
                     <ListGroup.Item>
                     <Button type='button' 
+                    variant='outline-info'
                     className='btn-block' 
                     disabled={cart.cartItems === 0}
                     onClick={placeOrderHandler}

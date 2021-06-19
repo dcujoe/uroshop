@@ -53,7 +53,7 @@ const ProductScreen = ({ history, match }) => {
     
     return (
         <>
-        <Link className='btn btn-dark my-3' to='/'>
+        <Link variant='outline-info' className='btn btn-dark my-3 outline-info' to='/'>
             Go back
         </Link>
         {loading ? (
@@ -139,6 +139,7 @@ const ProductScreen = ({ history, match }) => {
                         onClick={addToCartHandler}
                         className='btn-block' 
                         type='button' 
+                        variant='outline-info'
                         disabled={product.countInStock === 0}
                         >Add to Cart
                         </Button>
