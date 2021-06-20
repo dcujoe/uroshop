@@ -31,7 +31,7 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-    <Container fluid="true">
+    <Container fluid>
    
       <Helmet>
         <title>{`${logo.image}`}</title>
@@ -78,6 +78,9 @@ const HomeScreen = ({ match }) => {
                 <Product product={product} />
               </Col>
             ))}
+          </Row>
+          <Row className="homepage_section">
+           
           </Row>
           
           <Paginate

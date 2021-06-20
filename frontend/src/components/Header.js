@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header>
       <Navbar bg="white" variant="light" expand="lg" collapseOnSelect>
-        <Container>
+        <Container fluid>
           <LinkContainer to="/">
             <Navbar.Brand>Uroshop</Navbar.Brand>
           </LinkContainer>
