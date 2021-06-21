@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Carousel, Image } from 'react-bootstrap'
+import { Carousel, Image, Container, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from './Loader'
 import Message from './Message'
@@ -37,6 +37,9 @@ const ProductCarousel = () => {
                         </Link>
                     </Carousel.Item>
                 ))}
+                <Container>
+                    <Row>Sell any product at the comfort of your home</Row>
+                </Container>
             </Carousel>
     )
 }
