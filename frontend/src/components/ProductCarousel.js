@@ -39,6 +39,7 @@ const ProductCarousel = () => {
                 ))}
                 <Container>
                     <Row>Sell any product at the comfort of your home</Row>
+                    <Row>Be bold and start business</Row>
                 </Container>
             </Carousel>
     )
